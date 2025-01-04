@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(Verlet-Multithread LANGUAGES CXX)
+project(ParticelSimulator LANGUAGES CXX)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 option(BUILD_SHARED_LIBS "Build shared libraries" OFF)
@@ -20,12 +20,6 @@ add_executable(${PROJECT_NAME} ${SOURCES})
 target_include_directories(${PROJECT_NAME} PRIVATE "src")
 target_link_libraries(${PROJECT_NAME} PRIVATE sfml-graphics)
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_17)
-
-add_custom_command(
-    TARGET ${PROJECT_NAME}
-    COMMENT "Copy Res directory"
-    PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/res $<TARGET_FILE_DIR:${PROJECT_NAME}>/res
-    VERBATIM)
 
 if(WIN32)
     add_custom_command(
