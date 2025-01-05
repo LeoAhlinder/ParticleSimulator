@@ -1,6 +1,7 @@
 #include <iostream>
 
 int main() {
-	std::cout << "Hello, World!" << std::endl;
-	return 0;
-}
+	const uint32_t windowWidth = 1280;
+	const uint32_t windowHeight = 720;
+	
+} 

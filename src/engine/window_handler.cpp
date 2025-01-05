@@ -1,0 +1,5 @@
+struct WindowHandler {
+	WindowHandler() {
+		
+	}
+};
