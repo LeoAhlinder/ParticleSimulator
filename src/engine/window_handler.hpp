@@ -4,10 +4,15 @@
 
 struct WindowHandler {
 public: 
-	WindowHandler() {
-		std::cout << "WindowHandler constructor" << std::endl;
+	WindowHandler(sf::RenderWindow& window) {
+		registerCallBacks(window);
 	}
 	~WindowHandler() {
 		std::cout << "WindowHandler destructor" << std::endl;
+	}
+
+
+	void registerCallBacks(sf::RenderWindow& window) {
+		window.setActive(true);
 	}
 };

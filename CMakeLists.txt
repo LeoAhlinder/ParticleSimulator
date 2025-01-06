@@ -17,7 +17,7 @@ if(NOT source_files)
 endif()
 
 add_executable(${PROJECT_NAME} ${source_files})
-target_include_directories(${PROJECT_NAME} PRIVATE "src")
+target_include_directories(${PROJECT_NAME} PRIVATE "src" "engine")
 target_link_libraries(${PROJECT_NAME} PRIVATE sfml-graphics sfml-window sfml-system)
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_17)
 
